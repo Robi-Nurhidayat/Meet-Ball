@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Meet Ball</string>
+    <string name="login">Login</string>
+    <string name="meetball">MeetBall</string>
+    <string name="lupa_password">Lupa password ?</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
