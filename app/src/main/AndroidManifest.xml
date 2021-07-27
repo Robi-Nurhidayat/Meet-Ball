@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeetBall">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".HalamanUtamaAdmin"></activity>
+        <activity android:name=".AdminLogin" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
