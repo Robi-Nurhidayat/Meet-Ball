@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_login">#FFD68C</color>
+    <color name="color_halaman_admin">#FFD68C</color>
+    FFD68C
 </resources>

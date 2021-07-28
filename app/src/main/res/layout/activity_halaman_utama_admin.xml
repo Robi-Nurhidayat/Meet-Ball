@@ -1,15 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_halaman_admin"
     android:layout_height="match_parent"
     tools:context=".HalamanUtamaAdmin">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Halaman admin"/>
+    <!-- A CardView that contains a TextView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="true"
+            app:cardMaxElevation="20dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo_pesanan_admin"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/logo_pesanan_masuk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_pesanan_admin"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="18dp"
+                    android:text="Pesanan Masuk" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="true"
+            app:cardMaxElevation="20dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo_duit"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/dolar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_duit"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Pemasukkan" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view2"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="true"
+            app:cardMaxElevation="20dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo_produk"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginBottom="73dp"
+                    android:src="@drawable/produk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Produk Tersedia" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view3"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="true"
+            app:cardMaxElevation="20dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo_a"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/dolar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_a"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Pemasukkan" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view4"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="true"
+            app:cardMaxElevation="20dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo_c"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/logo_pesanan_masuk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_c"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="18dp"
+                    android:text="Pesanan Masuk" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view5"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="true"
+            app:cardMaxElevation="20dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo_b"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/dolar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_b"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Pemasukkan" />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>
