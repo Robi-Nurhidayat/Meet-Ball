@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_login">#FFD68C</color>
     <color name="color_halaman_admin">#FFD68C</color>
-    FFD68C
+    <color name="header_tambah_produk">#ffbe76</color>
+
 </resources>
