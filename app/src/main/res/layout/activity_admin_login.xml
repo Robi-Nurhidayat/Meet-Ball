@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_login"
+    android:background="@color/primary"
     tools:context=".AdminLogin">
 
 
@@ -19,7 +19,7 @@
         android:textColor="@color/white"
         android:layout_marginTop="35dp"
         android:textSize="35dp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/poppins_bold"/>
 
     <ImageView
         android:id="@+id/baso"
