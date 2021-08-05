@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeetBall">
-        <activity android:name=".TambahProduk"></activity>
-        <activity android:name=".ViewProduk" />
+        <activity android:name=".ListViewProduk"></activity>
+        <activity android:name=".TambahProduk" />
         <activity android:name=".MenuHalamanProduk" />
         <activity android:name=".HalamanProduk" />
         <activity android:name=".HalamanUtamaAdmin" />

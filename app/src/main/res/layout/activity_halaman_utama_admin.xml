@@ -147,7 +147,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_view3"
+            android:id="@+id/card_view_minuman"
             android:layout_marginLeft="40dp"
             android:layout_gravity="center"
             android:layout_width="140dp"
@@ -169,16 +169,7 @@
                     android:layout_alignParentEnd="true"
 
                     android:layout_marginEnd="30dp"
-                    android:src="@drawable/dolar" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/logo_a"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="30dp"
-                    android:text="Pemasukkan" />
+                    android:src="@drawable/drink" />
 
             </RelativeLayout>
 

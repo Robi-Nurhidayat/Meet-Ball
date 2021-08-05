@@ -5,7 +5,16 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import static android.content.ContentValues.TAG;
 
 public class MenuHalamanProduk extends AppCompatActivity {
 
@@ -18,13 +27,8 @@ public class MenuHalamanProduk extends AppCompatActivity {
 
         viewProduk = findViewById(R.id.card_view_lihat_produk);
         tambahProduk = findViewById(R.id.card_view_tambah_produk);
-        viewProduk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuHalamanProduk.this, ViewProduk.class);
-                startActivity(intent);
-            }
-        });
+
+
 
         tambahProduk.setOnClickListener(new View.OnClickListener() {
             @Override
