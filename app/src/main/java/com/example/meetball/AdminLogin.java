@@ -5,14 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewDebug;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class AdminLogin extends AppCompatActivity {
 
-    private EditText username, password;
+//    private TextInputEditText username, password;
+    private ImageView back_button;
+//    private EditText username, password;
     private Button btnLogin;
+    private TextInputEditText username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,15 @@ public class AdminLogin extends AppCompatActivity {
         username = findViewById(R.id.textEmailAdmin);
         password = findViewById(R.id.pwdAdmin);
         btnLogin = findViewById(R.id.btnLoginAdmin);
+        back_button = findViewById(R.id.back);
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent kembali = new Intent(AdminLogin.this, MainActivity.class);
+                startActivity(kembali);
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
