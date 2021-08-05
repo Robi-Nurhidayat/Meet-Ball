@@ -50,4 +50,11 @@ public class RequestTambahProduk implements Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
+    @Override
+    public String toString() {
+        return " "+namaProduk+"\n" +
+                " "+status+"\n" +
+                " "+desc;
+    }
 }

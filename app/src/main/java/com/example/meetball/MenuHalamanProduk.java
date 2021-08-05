@@ -37,5 +37,13 @@ public class MenuHalamanProduk extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        viewProduk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuHalamanProduk.this, ListViewProduk.class);
+                startActivity(intent);
+            }
+        });
     }
 }
