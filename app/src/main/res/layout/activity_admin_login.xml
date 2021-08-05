@@ -16,7 +16,6 @@
         android:src="@drawable/ic_back"
         android:id="@+id/back"/>
 
-
     <TextView
         android:id="@+id/textMet"
         android:layout_width="match_parent"

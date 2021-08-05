@@ -6,4 +6,5 @@
     <string name="sign_up">Sign Up</string>
     <string name="register">Register</string>
     <string name="login_sebagai_admin">Login Sebagai Admin</string>
+    <string name="home_text">Selamat Datang di MeetBall</string>
 </resources>

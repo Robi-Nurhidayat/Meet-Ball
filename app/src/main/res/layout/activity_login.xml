@@ -10,6 +10,13 @@
 
     <!-- A CardView that contains a TextView -->
 
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_back"
+        android:id="@+id/back"/>
+
     <TextView
         android:id="@+id/textMet"
         android:layout_width="match_parent"
@@ -19,15 +26,17 @@
         android:textColor="@color/white"
         android:layout_marginTop="35dp"
         android:textSize="35dp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/poppins_bold"/>
 
     <ImageView
         android:id="@+id/baso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="114dp"
         android:layout_below="@+id/textMet"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/baso" />
 
     <TextView
@@ -36,9 +45,10 @@
         android:text="@string/login"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="24dp"
         android:layout_below="@+id/baso"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -53,64 +63,79 @@
             android:orientation="vertical"
             android:layout_height="match_parent">
 
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="40dp"
+                android:layout_marginHorizontal="15dp"
                 android:hint="Email"
-                android:id="@+id/textEmail"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="30dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textEmail"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="40dp"
-                android:id="@+id/textPwd"
                 android:hint="Password"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="password_toggle">
 
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/textPwd"
+                    android:fontFamily="@font/poppins_regular" />
 
-               <Button
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentEnd="true"
-                   android:layout_marginTop="10dp"
-                   android:layout_marginEnd="155dp"
-                   android:text="@string/login" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-           </RelativeLayout>
-
-
-            <RelativeLayout
+            <TextView
+                android:id="@+id/lupaPwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
+                android:textAlignment="textEnd"
+                android:textColorLink="@color/secondary_700"
+                android:text="@string/lupa_password"
+                android:layout_marginEnd="15dp"
+                android:layout_marginVertical="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"/>
 
-                <TextView
-                    android:id="@+id/lupaPwd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lupa_password"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="18dp"
-                    android:textColor="@color/black" />
-
-                <Button
-                    android:id="@+id/btnSignUp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="122dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_toRightOf="@+id/lupaPwd"
-                    android:text="@string/sign_up" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnLogin"
+                android:layout_marginHorizontal="15dp"
+                android:text="Login"
+                android:fontFamily="@font/poppins_medium"/>
 
 
-            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Atau"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_regular"/>
 
+            <Button
+                android:id="@+id/signUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="@color/primary_700"
+                android:backgroundTint="@color/primary_50"
+                android:layout_marginHorizontal="15dp" />
 
         </LinearLayout>
 

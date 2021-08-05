@@ -10,6 +10,13 @@
 
     <!-- A CardView that contains a TextView -->
 
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_back"
+        android:id="@+id/back"/>
+
     <TextView
         android:id="@+id/textMet"
         android:layout_width="match_parent"
@@ -19,15 +26,18 @@
         android:textColor="@color/white"
         android:layout_marginTop="35dp"
         android:textSize="35dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"/>
 
     <ImageView
         android:id="@+id/baso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="114dp"
         android:layout_below="@+id/textMet"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="8dp"
         android:src="@drawable/baso" />
 
     <TextView
@@ -36,9 +46,9 @@
         android:text="@string/register"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="35dp"
+        android:textSize="24dp"
         android:layout_below="@+id/baso"
-        android:textStyle="bold" />
+        android:fontFamily="@font/poppins_medium"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -53,43 +63,67 @@
             android:orientation="vertical"
             android:layout_height="match_parent">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="40dp"
+                android:layout_marginHorizontal="15dp"
                 android:hint="Username"
-                android:id="@+id/textUsername"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:height="40dp"
-                android:hint="Email"
-                android:id="@+id/textEmail"
-                android:layout_marginTop="10dp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:height="40dp"
-                android:id="@+id/textPwd"
-                android:hint="Password"
-                android:layout_marginTop="10dp"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="155dp"
-                    android:text="@string/sign_up" />
+                    android:id="@+id/textUsername"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"/>
 
-            </RelativeLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:hint="Email"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textEmail"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/textPwd"
+                    android:fontFamily="@font/poppins_regular" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/signUpBtn"
+                android:layout_marginHorizontal="15dp"
+                android:text="@string/sign_up"
+                android:fontFamily="@font/poppins_medium"/>
 
 
             <RelativeLayout
