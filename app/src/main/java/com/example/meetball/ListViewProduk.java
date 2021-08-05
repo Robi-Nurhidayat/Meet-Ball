@@ -1,5 +1,6 @@
 package com.example.meetball;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,18 +19,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class ListViewProduk extends AppCompatActivity {
 
-    private DatabaseReference database;
+    private DatabaseReference database = FirebaseDatabase.getInstance().getReference();
     private ArrayList<RequestTambahProduk> daftarProduk;
     private AdapterProduk adapterProduk;
 
 
-    private RecyclerView rc_list_request;
-    private ProgressDialog loading;
-    private FloatingActionButton fab_add;
+    private RecyclerView listProduk;
 
 
     @Override
@@ -37,75 +38,34 @@ public class ListViewProduk extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_produk);
 
-        database = FirebaseDatabase.getInstance().getReference();
+        listProduk = findViewById(R.id.list_produk);
 
-        rc_list_request = findViewById(R.id.list_produk);
-//        fab_add = findViewById(R.id.fab_add);
+        RecyclerView.LayoutManager pLayout = new LinearLayoutManager(this);
+        listProduk.setLayoutManager(pLayout);
+        listProduk.setItemAnimator(new DefaultItemAnimator());
+        showData();
+    }
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        rc_list_request.setLayoutManager(mLayoutManager);
-        rc_list_request.setItemAnimator(new DefaultItemAnimator());
-
-        loading = ProgressDialog.show(ListViewProduk.this,
-                null,
-                "Please wait...",
-                true,
-                false);
-
-
+    private void showData(){
         database.child("RequestTambahProduk").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                /**
-                 * Saat ada data baru, masukkan datanya ke ArrayList
-                 */
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 daftarProduk = new ArrayList<>();
-                for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
-                    /**
-                     * Mapping data pada DataSnapshot ke dalam object Wisata
-                     * Dan juga menyimpan primary key pada object Wisata
-                     * untuk keperluan Edit dan Delete data
-                     */
-                    RequestTambahProduk requests = noteDataSnapshot.getValue(RequestTambahProduk.class);
-                    requests.setKey(noteDataSnapshot.getKey());
 
-                    /**
-                     * Menambahkan object Wisata yang sudah dimapping
-                     * ke dalam ArrayList
-                     */
-                    daftarProduk.add(requests);
+                for (DataSnapshot item : snapshot.getChildren()){
+                    RequestTambahProduk requestTambahProduk = item.getValue(RequestTambahProduk.class);
+                    requestTambahProduk.setKey(item.getKey());
+                    daftarProduk.add(requestTambahProduk);
                 }
 
-                /**
-                 * Inisialisasi adapter dan data hotel dalam bentuk ArrayList
-                 * dan mengeset Adapter ke dalam RecyclerView
-                 */
-                adapterProduk = new AdapterProduk(daftarProduk, ListViewProduk.this);
-                rc_list_request.setAdapter(adapterProduk);
-                loading.dismiss();
+                adapterProduk = new AdapterProduk(daftarProduk);
+                listProduk.setAdapter(adapterProduk);
+
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-                /**
-                 * Kode ini akan dipanggil ketika ada error dan
-                 * pengambilan data gagal dan memprint error nya
-                 * ke LogCat
-                 */
-                System.out.println(databaseError.getDetails()+" "+databaseError.getMessage());
-                loading.dismiss();
-            }
-        });
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
 
-        fab_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ListViewProduk.this, TambahProduk.class)
-                        .putExtra("id", "")
-                        .putExtra("namaProduk", "")
-                        .putExtra("status", "")
-                        .putExtra("desc", ""));
             }
         });
     }
