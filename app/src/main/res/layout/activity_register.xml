@@ -58,23 +58,23 @@
                 android:layout_height="wrap_content"
                 android:height="40dp"
                 android:hint="Username"
-                android:id="@+id/textUsername"
+                android:id="@+id/textUsernameReg"
                 android:layout_marginTop="40dp"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="40dp"
-                android:hint="Email"
-                android:id="@+id/textEmail"
+                android:id="@+id/textPwdReg"
+                android:hint="Password"
                 android:layout_marginTop="10dp"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="40dp"
-                android:id="@+id/textPwd"
-                android:hint="Password"
+                android:id="@+id/textPwdCon"
+                android:hint="Konfirmasi Password"
                 android:layout_marginTop="10dp"/>
 
             <RelativeLayout
