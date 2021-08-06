@@ -6,20 +6,188 @@
     android:layout_height="match_parent"
     tools:context=".HomeUser">
 
+    <Button
+        android:id="@+id/logoutUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/secondary_700"
+        android:fontFamily="@font/poppins_medium"
+        app:icon="@drawable/ic_logout"
+        app:iconTint="@color/secondary_700"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        />
+
     <TextView
         android:id="@+id/sambutanUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:text="Selamat Datang"
         android:fontFamily="@font/poppins_bold"
         android:textSize="18dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Silahkan Pilih Menu"
+        android:layout_below="@id/sambutanUser"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@+id/sambutanUser"
+        android:layout_marginTop="50dp">
+
+        <!-- A CardView that contains a TextView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_daftar_produk"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_product"
+                app:tint="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_lihat_produk"
+                android:layout_gravity="center"
+                android:text="Menu produk"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Daftar Produk yang tersedia"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- A CardView that contains a TextView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_daftar_minuman"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_drink"
+                app:tint="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lihat_produk"
+                android:layout_gravity="center"
+                android:text="Menu Minuman"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Daftar Minuman yang tersedia"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- A CardView that contains a TextView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_pesan_makanan"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_tambahmenu"
+                app:tint="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pesan_produk"
+                android:layout_gravity="center"
+                android:text="Pesan Makanan"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Melakukan Pemesanan"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

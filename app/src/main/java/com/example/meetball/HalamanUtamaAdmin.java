@@ -23,7 +23,6 @@ public class HalamanUtamaAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_halaman_utama_admin);
 
-
         logoutAdmin = findViewById(R.id.logoutAdmin);
         card_minuman = findViewById(R.id.card_view_minuman);
         card_pesanan_admin = findViewById(R.id.card_view_pesanan);
