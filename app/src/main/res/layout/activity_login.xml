@@ -58,8 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:height="40dp"
-                android:hint="Username"
-                android:id="@+id/textUsername"
+                android:hint="Email"
+                android:id="@+id/textEmail"
                 android:layout_marginTop="40dp"/>
 
             <EditText
@@ -77,7 +77,6 @@
                <Button
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:id="@+id/btnLoginUser"
                    android:layout_alignParentEnd="true"
                    android:layout_marginTop="10dp"
                    android:layout_marginEnd="155dp"

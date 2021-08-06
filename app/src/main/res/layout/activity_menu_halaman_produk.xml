@@ -7,82 +7,238 @@
     android:orientation="vertical"
     tools:context=".MenuHalamanProduk">
 
+    <Button
+        android:id="@+id/dashboardAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        app:icon="@drawable/ic_back"
+        app:iconTint="@color/black"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        />
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="150dp"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
         android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Halaman Produk"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Menu dibawah ini"
+            android:layout_marginLeft="40dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins_regular"/>
 
         <!-- A CardView that contains a TextView -->
         <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view_lihat_produk"
             android:layout_gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            card_view:cardCornerRadius="4dp">
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_product"
+                app:tint="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_lihat_produk"
+                android:layout_gravity="center"
+                android:text="View produk"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Daftar Produk yang tersedia"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- A CardView that contains a TextView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_tambah_produk"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_tambahmenu"
+                app:tint="@color/secondary_700"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/lihat_produk"
-                android:text="View produk"
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="50dp"/>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- A CardView that contains a TextView -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view_tambah_produk"
-            android:layout_gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            card_view:cardCornerRadius="4dp">
+                android:layout_gravity="center"
+                android:text="Tambah produk"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tambah Produk"
-                android:layout_marginTop="90dp"
-                android:textAlignment="center"/>
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menambahkan Produk"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
 
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
-
-        <!-- A CardView that contains a TextView -->
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view_lihat_produk1"
-            android:layout_gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            card_view:cardCornerRadius="4dp">
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
 
         </androidx.cardview.widget.CardView>
 
         <!-- A CardView that contains a TextView -->
         <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view_tambah_produk3"
+            android:id="@+id/card_view_ubah_produk"
             android:layout_gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            card_view:cardCornerRadius="4dp">
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ubah_produk"
+                android:layout_gravity="center"
+                android:text="Ubah produk"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mengubah Produk"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- A CardView that contains a TextView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_hapus_produk"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:layout_height="75dp"
+            android:outlineSpotShadowColor="@color/secondary_700"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:src="@drawable/ic_deletetrash"
+                app:tint="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hapus_produk"
+                android:layout_gravity="center"
+                android:text="Hapus produk"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_700"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Menghapus Produk"
+                android:textColor="@color/secondary_700"
+                android:textSize="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_next"
+                app:tint="@color/secondary_700" />
 
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
 
 </LinearLayout>

@@ -15,7 +15,6 @@
         android:layout_margin="10dp"
         android:id="@+id/back"/>
 
-
     <TextView
         android:id="@+id/textMet"
         android:layout_width="match_parent"

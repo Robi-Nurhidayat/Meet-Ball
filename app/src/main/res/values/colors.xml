@@ -7,5 +7,6 @@
     <color name="secondary_200">#e79b88</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary_50">#fdf4e5</color>
 
 </resources>
