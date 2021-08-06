@@ -25,6 +25,8 @@ public class RegisterActivity extends AppCompatActivity {
         passwordReg = findViewById(R.id.textPwdReg);
         passwordCon = findViewById(R.id.textPwdCon);
 
+        btnSignUp = findViewById(R.id.signUp);
+
         dbHelper = new DBHelper(this);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -42,8 +44,8 @@ public class RegisterActivity extends AppCompatActivity {
                         if (chekuser == false){
                             Boolean insert = dbHelper.insertData(user,pass);
                             if (insert == true){
-                                Toast.makeText(RegisterActivity.this,"Registrasi Berhasil",Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),HomeUser.class);
+                                Toast.makeText(RegisterActivity.this,"Registrasi Berhasil, Silahkan Login",Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(),RegistrasiBerhasil.class);
                                 startActivity(intent);
                             }else {
                                 Toast.makeText(RegisterActivity.this,"Gagal",Toast.LENGTH_SHORT).show();

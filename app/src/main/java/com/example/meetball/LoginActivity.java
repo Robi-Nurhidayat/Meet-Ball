@@ -21,20 +21,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//
-//        username = findViewById(R.id.textUsername);
-//        password = findViewById(R.id.textPwd);
-//        loginUser = findViewById(R.id.btnLoginUser);
-//        btnSignUp = findViewById(R.id.btnSignUp);
-        dbHelper = new DBHelper(this);
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
 
+        username = findViewById(R.id.textEmail);
+        password = findViewById(R.id.textPwd);
+        loginUser = findViewById(R.id.loginUser);
+        btnSignUp = findViewById(R.id.btnSignUp);
+
+        dbHelper = new DBHelper(this);
 
         loginUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,5 +49,14 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

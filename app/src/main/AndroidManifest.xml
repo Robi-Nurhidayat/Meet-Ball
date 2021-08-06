@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeetBall">
-        <activity android:name=".produk_baru.ProdukBaru"></activity>
+        <activity android:name=".RegistrasiBerhasil"></activity>
+        <activity android:name=".produk_baru.ProdukBaru" />
         <activity android:name=".minuman.MinumanAdmin" />
         <activity android:name=".pemasukkan.PemasukkanAdmin" />
         <activity android:name=".pesanan.PesananAdminActivity" />

@@ -7,7 +7,6 @@
     android:background="@color/primary_200"
     tools:context=".LoginActivity">
 
-
     <!-- A CardView that contains a TextView -->
 
     <TextView
@@ -75,6 +74,7 @@
                android:layout_height="wrap_content">
 
                <Button
+                   android:id="@+id/loginUser"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_alignParentEnd="true"
