@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/design_default_color_primary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="Form Input Minuman"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/et_minuman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Minuman"
+            android:inputType="textCapSentences"/>
+
+
+        <EditText
+            android:id="@+id/et_harga_minuman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Harga Minuman"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/et_minuman_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi"
+            android:inputType="textCapSentences"/>
+
+
+
+        <Button
+            android:id="@+id/btnSimpanMinuman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

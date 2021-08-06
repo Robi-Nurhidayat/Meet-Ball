@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/design_default_color_primary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="Form Input Bakso"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/et_nama_bakso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Bakso"
+            android:inputType="textCapSentences"/>
+
+
+        <EditText
+            android:id="@+id/et_harga_bakso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Harga Bakso"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/et_bakso_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi"
+            android:inputType="textCapSentences"/>
+
+
+
+        <Button
+            android:id="@+id/btnSimpanBakso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

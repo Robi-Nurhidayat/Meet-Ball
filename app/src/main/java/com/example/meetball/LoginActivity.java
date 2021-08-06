@@ -21,11 +21,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        username = findViewById(R.id.textUsername);
-        password = findViewById(R.id.textPwd);
-        loginUser = findViewById(R.id.btnLoginUser);
-        btnSignUp = findViewById(R.id.btnSignUp);
+//
+//        username = findViewById(R.id.textUsername);
+//        password = findViewById(R.id.textPwd);
+//        loginUser = findViewById(R.id.btnLoginUser);
+//        btnSignUp = findViewById(R.id.btnSignUp);
         dbHelper = new DBHelper(this);
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override

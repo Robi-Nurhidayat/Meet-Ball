@@ -14,7 +14,6 @@
         android:text="Dashboard"
         android:textColor="@color/black"
         android:fontFamily="@font/poppins_medium"
-        app:icon="@drawable/ic_back"
         app:iconTint="@color/black"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         />
@@ -155,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="25dp"
-                android:src="@drawable/ic_edit"
+
                 app:tint="@color/secondary_700"/>
 
             <TextView
@@ -204,7 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="25dp"
-                android:src="@drawable/ic_deletetrash"
+
                 app:tint="@color/secondary_700"/>
 
             <TextView

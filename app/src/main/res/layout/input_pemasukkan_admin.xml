@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/design_default_color_primary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="Form Input Pemasukkan"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/et_pemasukkan_hari"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hari"
+            android:inputType="textCapSentences"/>
+
+        <EditText
+            android:id="@+id/et_tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal"
+            android:inputType="textCapSentences"/>
+
+
+        <EditText
+            android:id="@+id/et_bulan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bulan"
+            android:inputType="textCapSentences"/>
+
+        <EditText
+            android:id="@+id/et_tahun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tahun"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/et_jumlah_pemasukkan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Pemasukkan"
+            android:inputType="number"/>
+
+
+
+        <Button
+            android:id="@+id/btnSimpanPemasukkan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
