@@ -59,9 +59,9 @@ public class AdapterBakso extends RecyclerView.Adapter<AdapterBakso.MyViewHolder
     public void onBindViewHolder(@NonNull @NotNull AdapterBakso.MyViewHolder holder, int position) {
 
         final Bakso b = baksoList.get(position);
-        holder.tv_namaBakso.setText("Hari : " + b.getNamaBakso());
-        holder.tv_hargaBakso.setText("Tanggal : " + b.getHarga());
-        holder.tv_BaksoDesc.setText("Bulan : " + b.getDesc());
+        holder.tv_namaBakso.setText("Nama : " + b.getNamaBakso());
+        holder.tv_hargaBakso.setText("Harga : " + b.getHarga());
+        holder.tv_BaksoDesc.setText("Deskripsi : " + b.getDesc());
 
         holder.hapus_bakso.setOnClickListener(new View.OnClickListener() {
             @Override

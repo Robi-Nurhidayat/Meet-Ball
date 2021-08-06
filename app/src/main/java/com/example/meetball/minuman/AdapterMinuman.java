@@ -56,9 +56,9 @@ public class AdapterMinuman extends RecyclerView.Adapter<AdapterMinuman.MyViewHo
     public void onBindViewHolder(@NonNull @NotNull AdapterMinuman.MyViewHolder holder, int position) {
 
         final Minuman m = minumanList.get(position);
-        holder.tv_namaMinuman.setText("Hari : "+m.getNamaMinuman());
-        holder.tv_harga_minuman.setText("Tanggal : "+m.getHarga());
-        holder.tv_MinumanDesc.setText("Bulan : "+m.getDesc());
+        holder.tv_namaMinuman.setText("Nama : "+m.getNamaMinuman());
+        holder.tv_harga_minuman.setText("Harga : "+m.getHarga());
+        holder.tv_MinumanDesc.setText("Deskripsi : "+m.getDesc());
 
         holder.hapus.setOnClickListener(new View.OnClickListener() {
             @Override
