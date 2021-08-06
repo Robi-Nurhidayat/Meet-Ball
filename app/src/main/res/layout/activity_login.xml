@@ -52,65 +52,71 @@
             android:orientation="vertical"
             android:layout_height="match_parent">
 
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="40dp"
-                android:hint="Email"
-                android:id="@+id/textEmail"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginHorizontal="15dp"
+                android:hint="Username"
+                android:layout_marginTop="40dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textEmail"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:height="40dp"
-                android:id="@+id/textPwd"
+                android:layout_marginHorizontal="15dp"
                 android:hint="Password"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                app:endIconMode="password_toggle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textPwd"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
                <Button
                    android:id="@+id/loginUser"
-                   android:layout_width="wrap_content"
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_alignParentEnd="true"
                    android:layout_marginTop="10dp"
-                   android:layout_marginEnd="155dp"
+                   android:layout_marginHorizontal="20dp"
                    android:text="@string/login" />
 
-           </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
 
                 <TextView
                     android:id="@+id/lupaPwd"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/lupa_password"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="18dp"
-                    android:textColor="@color/black" />
+                    android:text="ATAU"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/btnSignUp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="122dp"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginHorizontal="20dp"
                     android:layout_toRightOf="@+id/lupaPwd"
-                    android:text="@string/sign_up" />
-
-
-            </RelativeLayout>
-
+                    android:text="@string/sign_up"
+                    android:backgroundTint="@color/primary_50"
+                    android:textColor="@color/primary_700"/>
 
         </LinearLayout>
 
