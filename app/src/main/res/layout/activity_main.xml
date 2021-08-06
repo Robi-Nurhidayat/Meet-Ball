@@ -32,7 +32,7 @@
         android:layout_alignEnd="@+id/btnAdmin"
         android:text="Pelanggan"
         android:layout_gravity="center"
-        app:icon="@drawable/ic_user"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
         android:text="Admin"
         android:layout_gravity="center"
         android:backgroundTint="@color/secondary_700"
-        app:icon="@drawable/ic_admin"/>
+        />
 
     </LinearLayout>
 

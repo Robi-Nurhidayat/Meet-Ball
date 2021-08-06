@@ -212,7 +212,7 @@
                     android:layout_alignParentEnd="true"
 
                     android:layout_marginEnd="30dp"
-                    android:src="@drawable/minum" />
+                     />
 
                 <TextView
                     android:layout_width="122dp"
