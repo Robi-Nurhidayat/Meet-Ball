@@ -19,7 +19,6 @@ public class HomeUser extends AppCompatActivity {
     CardView card_view_daftar_produk;
     CardView card_view_daftar_minuman;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
